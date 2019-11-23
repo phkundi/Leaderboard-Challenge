@@ -5,14 +5,14 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('RICHEST_SECRET_KEY', '961773e6538eb2a77724ec0bf1a36de3da333f4a6b326299')
+SECRET_KEY = os.environ.get('LBC_SECRET_KEY', '961773e6538eb2a77724ec0bf1a36de3da333f4a6b326299')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True') # Returns boolean True or False depending on env variable
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['leaderboardchallenge.herokuapp.com']
 
-COUNTDOWN_MODE = False
+COUNTDOWN_MODE = (os.environ.get('COUNTDOWN_MODE') == 'True')
 
 SECURE_SSL_REDIRECT = (os.environ.get('SECURE_SSL_REDIRECT') == 'True')
 # Application definition
