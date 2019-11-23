@@ -1,0 +1,95 @@
+.countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    h1{
+        font-family: $headingFont;
+    }
+
+    span{
+        font-size: 2rem;
+
+        @mixin atMedium{
+            font-size: 3.5rem;
+        }
+    }
+
+    .not-btn{
+        margin-top: 20px;
+        
+        @mixin atMedium{
+            margin-top: 0;
+        }
+    }
+}
+
+.modal{
+    font-family: $mainFont !important;
+
+    .modal-dialog{
+        width: 100%;
+    }
+
+    .modal-content{
+        background-color: $bgColor;
+        border: 2px solid $mainColor;
+    }
+
+    .modal-header{
+        border: none;
+
+        .close{
+            color: $mainColor;
+        }
+        
+        .modal-title{
+            color: $mainColor;
+            font-family: $headingFont;
+            font-size: 2rem;
+        }
+    }
+
+    .modal-body{
+        color: $mainColor;
+
+        form{
+            article{
+                width: 100%;
+            }
+
+            input[type="email"]{
+                width: 100%;
+                padding: 5px;
+                background: transparent;
+                border: 1px solid $mainColor;
+                outline: none;
+                color: white;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            input[type="submit"]{
+                margin: 20px 0;
+                background: transparent;
+                color: $mainColor;
+                padding: 10px 20px;
+                border: 2px solid $mainColor;
+                border-radius: 10px;
+
+                &:hover{
+                    background: $mainColor;
+                    color: $bgColor;
+                }
+            }
+        }
+    }
+
+    .modal-footer{
+        border: none;
+    }
+}

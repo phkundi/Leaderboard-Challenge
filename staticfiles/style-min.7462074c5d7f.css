@@ -1,0 +1,761 @@
+/* $bgColor: #061321; */
+
+/* $mainColor: #e6af19; */
+
+/* Main Font */
+
+/* Headings Font */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.no-p{
+    padding: 0 !important;
+}
+
+.fixed-home-btn{
+    display: block;
+    position: fixed;
+    bottom: 15%;
+    right: 0%;
+    padding-left: 20px;
+    padding-right: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.fixed-home-btn a{
+        color: #ffbe0a;
+    }
+
+@media (min-width: 800px){
+
+.fixed-home-btn a{
+            color: #111
+    }
+	}
+
+.fixed-home-btn i{-webkit-transition: all 0.1s ease-in-out;transition: all 0.1s ease-in-out;}
+
+.fixed-home-btn i:hover{-webkit-transform: scale(1.1);transform: scale(1.1);}
+
+@media (min-width: 800px){
+
+.fixed-home-btn{
+        display: block;
+        bottom: 40%;
+        background: #ffbe0a;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px
+}
+	}
+
+@media (min-width: 800px){
+
+.only-mobile-display{
+        display: none
+}
+	}
+
+.only-desktop-display{
+    display: none;
+}
+
+@media (min-width: 800px){
+
+.only-desktop-display{
+        display:block
+}
+	}
+
+*{
+	box-sizing: border-box;
+}
+
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+body,html{
+	min-height: 100vh;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: #111;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: #ffbe0a;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+html{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+}
+
+body{
+ 	padding-bottom: 250px; /*Height of footer */
+	min-width: 100%;
+}
+
+@media (min-width: 800px){
+
+body{
+		padding-bottom: 155px
+}
+	}
+
+img{
+	height: auto;
+	max-width: 100%;
+}
+
+/* Typography */
+
+button,
+input,
+select,
+optgroup,
+textarea{
+	color: black;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+textarea{
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	clear: both;
+	font-weight: 300;
+	color: inherit;
+}
+
+p {
+	margin-bottom: 1.2rem;
+	color: inherit;
+}
+
+strong{
+	font-weight: 400;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote{
+	margin: 0 1.5em;
+}
+
+.site-header{
+    text-align: center;
+    color: #ffbe0a;
+    height: 20%;
+    padding: 30px 0;
+    font-size: 2.5em;
+    font-family: 'Staatliches', cursive;
+    width: 100%;
+    background-color: transparent;
+}
+
+@media (min-width: 800px){
+
+.site-header{
+        height: 30%;
+        padding: 50px 0;
+        font-size: 3.5em
+}
+	}
+
+.site-header--ranking{
+        margin-bottom: 0;
+        height: 30%;
+    }
+
+.site-header--ranking h3{
+            font-size: 1.3rem;
+        }
+
+.site-header--payment{
+        margin-bottom: 0;
+        height: 20%;
+    }
+
+@media (min-width: 1010px){
+
+.site-header--payment{
+            height: 30%
+    }
+	}
+
+.site-header--privacy{
+        background-color: #111;
+    }
+
+.site-header .menu{
+        display: none;
+    }
+
+@media (min-width: 1010px){
+
+.site-header .menu{
+            display: block
+    }
+	}
+
+.site-header .menu ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+.site-header .menu ul li{
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+.site-header .menu ul li a{
+                    font-size: 1.3rem;
+                    color: #ffbe0a;
+                    background-color: #111;
+                    padding: 5px 10px;
+                    border: 1px solid #ffbe0a;
+                    border-radius: 15px;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                }
+
+.site-header .menu ul li a:hover{
+                        text-decoration: none;
+                        background-color: #ffbe0a;
+                        color: #111;
+                    }
+
+.intro{
+	min-height: 80%; /* will cover 100% of viewport */
+	position: relative;
+    display: block;
+    padding-top: 0px;
+    padding-bottom: 100px;
+}
+
+/* background-color: rgba($bgColor, 0.3); */
+
+@media (min-width: 800px){
+
+.intro{
+        min-height: 70%
+}
+	}
+
+/* border-bottom: 2px solid $mainColor; */
+
+.intro .card-form{
+        background-color: transparent;
+        border: none;
+    }
+
+.start{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffbe0a;
+}
+
+.start h2{
+        font-size: 1.4rem;
+    }
+
+@media (min-width: 800px){
+
+.start{
+        font-size: 1.1rem
+}
+
+        .start h2{
+            font-size: 1.4rem;
+        }
+	}
+
+.donation-form{
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    background: rgba(17,17,17,0.4);
+    border: 1px solid rgba(255,190,10, 0.6);
+    outline: none;
+    color: white;
+    width: 300px;
+    margin-bottom: 10px;
+
+}
+
+.donation-form:focus{
+        outline: none;
+    }
+
+@media (min-width: 800px){
+
+.donation-form{
+        font-size: 1.4rem
+
+}
+	}
+
+.payment-btn{
+    background: transparent;
+    margin-top: 10px;
+    color: #ffbe0a;
+    border: 2px solid #ffbe0a;
+    border-radius: 15px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2rem;
+    padding: 20px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.payment-btn:hover{
+        background: #ffbe0a;
+        color: #222;
+    }
+
+.payment-btn:focus{
+        outline: none;
+    }
+
+@media (min-width: 800px){
+
+.payment-btn{
+        margin-top: 20px;
+        font-size: 1.2rem;
+        padding: 15px
+
+}
+	}
+
+.ranking{
+    font-family: 'PT Sans', sans-serif;
+    padding: 0 !important;
+}
+
+@media (min-width: 800px){
+
+.ranking{
+        padding-bottom: 50px !important
+}
+	}
+
+.ranking .donation-message{
+        text-align: center;
+    }
+
+.ranking .donation-message h3{
+            font-size: 1.3rem;
+        }
+
+.ranking .donation-message .payment-btn{
+            margin-top: 20px;
+        }
+
+.ranking .frontpage-message{
+        padding-top: 40px;
+
+    }
+
+.ranking .frontpage-message h2{
+            font-family: 'Staatliches', cursive;
+            font-size: 3rem;
+        }
+
+.ranking .frontpage-message h3{
+            font-family: 'Staatliches', cursive;
+            font-size: 1.3rem;
+        }
+
+.ranking .table-dark{
+        background-color: rgba(255,190,10, 1);
+        color: black;
+    }
+
+.ranking table{
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+@media (min-width: 800px){
+
+.ranking table{
+            border-radius: 15px;
+            margin-top: 40px;
+            font-size: 1.1rem
+    }
+	}
+
+.ranking table thead th{
+                border-top: none;
+            }
+
+.ranking table th, .ranking table td{
+            border-color: #111;
+            padding: 20px 10px;
+        }
+
+@media (min-width: 800px){
+
+.ranking table th, .ranking table td{
+                padding: 20px 20px
+        }
+	}
+
+.payment{
+    /* padding-top: 50px; */
+    padding-bottom: 50px;
+    background-color: #111;
+}
+
+@media (min-width: 800px){
+
+.payment{
+        padding-top: 30px;
+        padding-bottom: 70px;
+        background-color: transparent
+}
+	}
+
+.payment h2{
+        font-family: 'PT Sans', sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+
+@media (min-width: 1010px){
+
+.payment h2{
+            margin-bottom: 20px
+    }
+	}
+
+.payment .card{
+        background-color: #111;
+        padding: 100px 0;
+    }
+
+@media (min-width: 800px){
+
+.payment .card{
+            border: 2px solid #ffbe0a;
+            border-radius: 15px;
+            padding: 20px 0
+    }
+	}
+
+.payment .card h4{
+            font-family: 'PT Sans', sans-serif;
+            padding: 0 10px;
+        }
+
+.payment-provider-notice{
+    font-size: 0.8rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.payment-provider-notice a{
+        color: #ffbe0a;
+        text-decoration: underline;
+    }
+
+.powered-by-stripe img{
+        margin-top: 20px;
+        width: 300px;
+    }
+
+@media (min-width: 800px){
+
+.powered-by-stripe img{
+            margin-top: 10px;
+            float: right
+    }
+	}
+
+.privacy{
+    background-color: #111;
+    padding: 50px 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+.privacy a{
+        color: #ffbe0a;
+    }
+
+.privacy h2{
+        margin-top: 40px;
+        font-size: 1.4rem;
+        text-decoration: underline;
+    }
+
+.site-footer{
+    /* background-color: $bgColor; */
+    padding-top: 50px;
+    padding-bottom: 10px;
+    /* border-top: 2px solid $mainColor; */
+    font-family: 'PT Sans', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-footer a{
+        color: #ffbe0a;
+    }
+
+.site-footer .left{
+        margin-bottom: 30px;
+    }
+
+@media (min-width: 1010px){
+
+.site-footer .left{
+             margin-top: 30px;
+            margin-bottom: 0
+    }
+	}
+
+.site-footer .right{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+.site-footer .up-btn i{
+            font-size: 3em;
+        }
+
+#stripeBtn {
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  text-decoration: none;
+  color: #111;
+  background: #ffbe0a;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 20px 30px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+ 
+  margin: 0 auto;
+}
+
+/* margin-top: 28px; */
+
+@media (min-width: 1010px){
+
+#stripeBtn {
+    margin-left: 12px;
+    float: left;
+    padding: 0 14px;
+    line-height: 40px;
+    height: 40px
+}
+	}
+
+#stripeBtn:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
+  background-color: #ffbe0a;
+}
+
+#stripe-form {
+  padding: 30px;
+  height: 120px;
+}
+
+#stripeBtnLabel {
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#card-errors {
+  height: 20px;
+  padding: 4px 0;
+  color: #fa755a;
+}
+
+.stripe-form-row {
+  width: 100%;
+  float: left;
+}
+
+@media (min-width: 800px){
+
+.stripe-form-row {
+    width: 70%
+}
+	}
+
+.StripeElement {
+  box-sizing: border-box;
+
+  height: 40px;
+
+  padding: 10px 12px;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: white;
+
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.countdown{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.countdown h1{
+        font-family: 'Staatliches', cursive;
+    }
+
+.countdown span{
+        font-size: 2rem;
+    }
+
+@media (min-width: 800px){
+
+.countdown span{
+            font-size: 3.5rem
+    }
+	}
+
+.countdown .not-btn{
+        margin-top: 20px;
+    }
+
+@media (min-width: 800px){
+
+.countdown .not-btn{
+            margin-top: 0
+    }
+	}
+
+.modal{
+    font-family: 'PT Sans', sans-serif !important;
+}
+
+.modal .modal-dialog{
+        width: 100%;
+    }
+
+.modal .modal-content{
+        background-color: #111;
+        border: 2px solid #ffbe0a;
+    }
+
+.modal .modal-header{
+        border: none;
+    }
+
+.modal .modal-header .close{
+            color: #ffbe0a;
+        }
+
+.modal .modal-header .modal-title{
+            color: #ffbe0a;
+            font-family: 'Staatliches', cursive;
+            font-size: 2rem;
+        }
+
+.modal .modal-body{
+        color: #ffbe0a;
+    }
+
+.modal .modal-body form article{
+                width: 100%;
+            }
+
+.modal .modal-body form input[type="email"]{
+                width: 100%;
+                padding: 5px;
+                background: transparent;
+                border: 1px solid #ffbe0a;
+                outline: none;
+                color: white;
+            }
+
+.modal .modal-body form input[type="email"]:focus{
+                    outline: none;
+                }
+
+.modal .modal-body form input[type="submit"]{
+                margin: 20px 0;
+                background: transparent;
+                color: #ffbe0a;
+                padding: 10px 20px;
+                border: 2px solid #ffbe0a;
+                border-radius: 10px;
+            }
+
+.modal .modal-body form input[type="submit"]:hover{
+                    background: #ffbe0a;
+                    color: #111;
+                }
+
+.modal .modal-footer{
+        border: none;
+    }

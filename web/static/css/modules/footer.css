@@ -1,0 +1,35 @@
+.site-footer{
+    /* background-color: $bgColor; */
+    padding-top: 50px;
+    padding-bottom: 10px;
+    /* border-top: 2px solid $mainColor; */
+    font-family: $mainFont;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    a{
+        color: $mainColor;
+    }
+
+    .left{
+        margin-bottom: 30px;
+
+        @mixin atLarge{
+             margin-top: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    .right{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .up-btn{
+
+        i{
+            font-size: 3em;
+        }
+    }
+}

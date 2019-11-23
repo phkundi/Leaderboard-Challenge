@@ -1,0 +1,235 @@
+.intro{
+	min-height: 80%; /* will cover 100% of viewport */
+	position: relative;
+    display: block;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    /* border-bottom: 2px solid $mainColor; */
+    /* background-color: rgba($bgColor, 0.3); */
+
+    @mixin atMedium{
+        min-height: 70%;
+    }
+
+    .card-form{
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.start{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $mainColor;
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    @mixin atMedium{
+        font-size: 1.1rem;
+
+        h2{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.donation-form{
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    background: rgba($bgColor,0.4);
+    border: 1px solid rgba($mainColor, 0.6);
+    outline: none;
+    color: white;
+    width: 300px;
+    margin-bottom: 10px;
+
+    &:focus{
+        outline: none;
+    }
+
+    @mixin atMedium{
+        font-size: 1.4rem;
+    }
+
+}
+
+.payment-btn{
+    background: transparent;
+    margin-top: 10px;
+    color: $mainColor;
+    border: 2px solid $mainColor;
+    border-radius: 15px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2rem;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background: $mainColor;
+        color: #222;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    @mixin atMedium{
+        margin-top: 20px;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+}
+
+.ranking{
+    font-family: $mainFont;
+    padding: 0 !important;
+
+    @mixin atMedium{
+        padding-bottom: 50px !important;
+    }
+    
+    .donation-message{
+        text-align: center;
+
+        h3{
+            font-size: 1.3rem;
+        }
+
+        .payment-btn{
+            margin-top: 20px;
+        }
+    }
+
+    .frontpage-message{
+        padding-top: 40px;
+
+        h2{
+            font-family: $headingFont;
+            font-size: 3rem;
+        }
+
+        h3{
+            font-family: $headingFont;
+            font-size: 1.3rem;
+        }
+
+    }
+
+    .table-dark{
+        background-color: rgba($mainColor, 1);
+        color: black;
+    }
+
+    table{
+        margin-top: 20px;
+        font-size: 1rem;
+
+        @mixin atMedium{
+            border-radius: 15px;
+            margin-top: 40px;
+            font-size: 1.1rem;
+        }
+        
+
+        thead{
+            th{
+                border-top: none;
+            }
+        }
+
+        th, td{
+            border-color: $bgColor;
+            padding: 20px 10px;
+
+            @mixin atMedium{
+                padding: 20px 20px;
+            }
+        }
+    }
+}
+
+.payment{
+    /* padding-top: 50px; */
+    padding-bottom: 50px;
+    background-color: $bgColor;
+
+    @mixin atMedium{
+        padding-top: 30px;
+        padding-bottom: 70px;
+        background-color: transparent;
+    }
+
+    h2{
+        font-family: $mainFont;
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+
+        @mixin atLarge{
+            margin-bottom: 20px;
+        }
+    }
+
+    .card{
+        background-color: $bgColor;
+        padding: 100px 0;
+
+        @mixin atMedium{
+            border: 2px solid $mainColor;
+            border-radius: 15px;
+            padding: 20px 0;
+        }
+
+        h4{
+            font-family: $mainFont;
+            padding: 0 10px;
+        }
+    }
+}
+
+.payment-provider-notice{
+    font-size: 0.8rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+
+    a{
+        color: $mainColor;
+        text-decoration: underline;
+    }
+}
+
+.powered-by-stripe{
+    img{
+        margin-top: 20px;
+        width: 300px;
+
+        @mixin atMedium{
+            margin-top: 10px;
+            float: right;
+        }
+    }
+}
+
+
+.privacy{
+    background-color: $bgColor;
+    padding: 50px 0;
+    font-family: $mainFont;
+    font-size: 1.1rem;
+
+    a{
+        color: $mainColor;
+    }
+
+    h2{
+        margin-top: 40px;
+        font-size: 1.4rem;
+        text-decoration: underline;
+    }
+}

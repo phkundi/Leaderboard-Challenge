@@ -1,0 +1,57 @@
+{% extends 'web/base.html' %}
+
+{% block content %}
+
+<header class="site-header site-header--ranking">
+    <h1>Biggest Spenders</h1>
+    <h3>Total Amount: ${{ donation_total }} | Participants: {{ donation_count }}</h3>
+</header>
+
+<section class="site-content">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="ranking col-sm-12 col-lg-7 text-center">
+
+            <div class="donation-message">
+                {% if msg %}
+                <h3>{{ msg }} <span id="donation_amount">${{ donation_amount }}</span></h3>
+                <p>You are currently on rank #<span id="current_rank">{{user_rank}}</span></p>
+                {% endif %}
+            </div>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in list %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.amount}}$</td>
+                        <td>{{item.message}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<span class="fixed-home-btn">
+    <a href="{% url 'homepage' %}"><i class="fas fa-home"></i></a>
+</span>
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

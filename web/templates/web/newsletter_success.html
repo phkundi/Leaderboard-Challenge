@@ -1,0 +1,20 @@
+{% extends 'web/base.html' %}
+
+{% block content %}
+
+<header class="site-header site-header--ranking">
+    Success
+</header>
+
+<section class="site-content">
+    <div class="row justify-content-center newsletter">
+        <div class="col-lg-6 text-center newsletter-success">
+            <h1>Thank you for signing up to our newsletter. You will regret it.</h1>
+            <p>Now go and waste some money</p>
+            
+            <a href="{% url 'homepage' %}" class="payment-btn">Back to Homepage</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

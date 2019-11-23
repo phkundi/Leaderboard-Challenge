@@ -1,0 +1,102 @@
+{% extends 'web/base.html' %}
+
+{% block content %}
+    <header class="site-header">
+        The Leaderboard Challenge
+    </header>
+
+    <section class="intro" id="intro">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <div class="card card-form">
+                    <div class="start">
+                        <h2>Get your spot on the leaderboard</h2>
+                        <p>Where will you end up?</p>
+                    </div>
+                    <div id="error_explanation"></div>
+                    <form action="{% url 'payment' %}" method="post" id="donation_form">
+                        {% csrf_token %}
+                        <article>
+                            <input class="donation-form" id="amount" name="amount" type="number" placeholder="Amount (US$)">
+                        </article>
+                        <article>
+                            <input type="text" id="name" name="name" class="donation-form" placeholder="Name (optional)" maxlength="30">
+                        </article>
+                        <article>
+                            <textarea class="donation-form" name="message" id="message" placeholder="Message (optional)" maxlength="50"
+                                cols="30" rows="2"></textarea>
+                        </article>
+                        <article>
+                            <input type="hidden" name="copy" value="" />
+                        </article>
+                        <button class="payment-btn" id="payment-btn">Complete Payment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ranking">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-7 text-center no-p">
+        
+                <div class="frontpage-message">
+                    <h2>Current Leaderboard</h2>
+                    <h3>Number of Participants: {{ donation_count }}</h3>
+                    <p>Participate above to see the amounts</p>
+                </div>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in list %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{item.name}}</td>
+                            <td>???</td>
+                            <td>{{item.message}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    var form = $('#donation_form');
+    $('#payment-btn').on('click', function (e) {
+        e.preventDefault();
+
+        $('#error_explanation').html('');
+
+        var amount = $('input#amount').val();
+        amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+
+        amount = parseFloat(amount);
+
+        if (isNaN(amount)) {
+            $('#error_explanation').html('<p>Please enter a valid amount in USD ($).</p>');
+        }
+        else if (amount < 1.00) {
+            $('#error_explanation').html('<p>Donation amount must be at least $1.</p>');
+        }
+        else {
+            form.submit();
+        }
+    });
+</script>
+
+{% endblock %}
