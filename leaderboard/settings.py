@@ -10,7 +10,7 @@ SECRET_KEY = os.environ.get('LBC_SECRET_KEY', '961773e6538eb2a77724ec0bf1a36de3d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True') # Returns boolean True or False depending on env variable
 
-ALLOWED_HOSTS = ['leaderboardchallenge.herokuapp.com']
+ALLOWED_HOSTS = ['leaderboardchallenge.herokuapp.com',]
 
 COUNTDOWN_MODE = (os.environ.get('COUNTDOWN_MODE') == 'True')
 
